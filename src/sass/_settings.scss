@@ -33,6 +33,10 @@ body {
   max-width: 1220px;
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .container {
     margin: 0 auto;

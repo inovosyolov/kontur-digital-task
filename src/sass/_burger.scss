@@ -21,7 +21,7 @@
       background: $orange;
       border-radius: 21px;
       transform: translateX(-50%);
-      transition: transform .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out;
+      transition: background .1s ease-in-out, transform .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out;
 
       &:nth-child(1) {
         top: 15px;
@@ -38,7 +38,7 @@
     }
 
     &_active {
-      opacity: 0;
+      opacity: 1;
 
       & .burger__span:nth-child(2) {
         opacity: 0;
@@ -47,18 +47,20 @@
       & .burger__span:first-child {
         left: 0;
         top: 50%;
+        background: $lighter-grey;
         transform: rotate(45deg);
         transform-origin: center;
-        transition: transform .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out;
+        transition: background .4s ease-in-out, transform .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out;
       }
 
       & .burger__span:last-child {
         left: 0;
         bottom: auto;
         top: 50%;
+        background: $lighter-grey;
         transform: rotate(-45deg);
         transform-origin: center;
-        transition: transform .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out;
+        transition: background .4s ease-in-out, transform .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out;
       }
     }
   }

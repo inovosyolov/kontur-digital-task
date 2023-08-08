@@ -30,6 +30,12 @@
       gap: 41px;
     }
 
+    &-item {
+      &_hidden {
+        display: none;
+      }
+    }
+
     &-link {
       font-size: 13px;
       line-height: 1.04px;
@@ -96,7 +102,44 @@
 @media (max-width: 886px) {
   .header {
     &__nav {
-      display: none;
+      position: absolute;
+      left: 0;
+      top: -25px;
+      width: 100%;
+      min-width: 320px;
+      height: 100vh;
+      z-index: 1000;
+      padding: 80px 43px 325px;
+      margin: 0;
+      background-color: #FFFFFF;
+      box-shadow: 0px 0px 18px -4px rgba(34, 60, 80, 0.2);
+      overflow-y: auto;
+      visibility: hidden;
+      transform: translateY(-120%);
+      transition: visibility .2s ease-in-out, transform .2s ease-in-out;
+
+      &-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: initial;
+      }
+
+      &-item {
+        &_hidden {
+          display: block;
+        }
+      }
+
+      &-link {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 2em;
+      }
+
+      &_active {
+        visibility: visible;
+        transform: none;
+      }
     }
   }
 }

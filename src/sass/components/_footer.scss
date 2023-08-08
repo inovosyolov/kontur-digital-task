@@ -73,6 +73,20 @@
           font-size: 13px;
           line-height: 1.04em;
           color: $main-font-color;
+          outline: none;
+          transition: color .2s ease-in-out;
+
+          &:focus-visible {
+            color: $orange;
+          }
+
+          &:hover {
+            color: $orange;
+          }
+
+          &:active {
+            color: $dark-orange;
+          }
         }
       }
     }
@@ -85,6 +99,20 @@
       &__link {
         line-height: 1.43em;
         color: $main-font-color;
+        outline: none;
+        transition: color .2s ease-in-out;
+
+        &:focus-visible {
+          color: $orange;
+        }
+
+        &:hover {
+          color: $orange;
+        }
+
+        &:active {
+          color: $dark-orange;
+        }
 
         &_phone {
           color: $aqua;
@@ -113,6 +141,21 @@
     }
 
     &__link {
+      outline: none;
+      transition: color .2s ease-in-out;
+
+      &:focus-visible {
+        color: $orange;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:active {
+        color: $dark-orange;
+      }
+
       &:not(:last-child) {
         margin-right: 64px;
       }

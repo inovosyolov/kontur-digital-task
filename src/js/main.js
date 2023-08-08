@@ -1,3 +1,7 @@
+let burger = document.querySelector('.burger');
+let menu = document.querySelector('.header__nav');
+let menuLinks = menu.querySelectorAll('.header__nav-link');
+
 let modal = document.querySelector('.modal');
 let modalBox = document.querySelector('.modal__box');
 let bannerBtn = document.querySelectorAll('.banner__btn');
@@ -5,6 +9,21 @@ let modalCloseBtn = document.querySelector('.modal__close-btn');
 
 let selector = document.querySelector("input[type='tel']");
 let im = new Inputmask("+7 999 - 999 - 99 - 99");
+
+burger.addEventListener('click',
+function () {
+  burger.classList.toggle('burger_active');
+  menu.classList.toggle('header__nav_active');
+  document.body.classList.toggle('stop-scroll');
+})
+
+menuLinks.forEach(function (el) {
+el.addEventListener('click', function () {
+  burger.classList.remove('burger_active');
+  menu.classList.remove('header__nav_active');
+  document.body.classList.remove('stop-scroll');
+})
+})
 
 bannerBtn.forEach(function (el) {
   el.addEventListener('click', function () {
