@@ -1,0 +1,15 @@
+@import "normalize";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "settings";
+@import "btn";
+@import "burger";
+
+@import "./components/header";
+@import "./components/banner";
+@import "./components/info";
+@import "./components/cards";
+@import "./components/map";
+@import "./components/footer";

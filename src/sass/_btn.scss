@@ -1,0 +1,29 @@
+.btn {
+  @include btn-reset;
+  display: flex;
+  gap: 12px;
+  padding: 27px 45px;
+  font-family: $main-font;
+  color: $white;
+  background: $orange;
+  border-radius: 82px;
+  outline: none;
+  transition: background .2s ease-in-out;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:focus-visible {
+    background: $aqua;
+  }
+
+  &:hover {
+    background: $aqua;
+  }
+
+  &:active {
+    background: $dark-aqua;
+  }
+}

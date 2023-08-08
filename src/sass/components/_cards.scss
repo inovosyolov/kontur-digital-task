@@ -1,0 +1,150 @@
+.cards {
+  padding-bottom: 60px;
+
+  &__list {
+    @include list-reset;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 32px;
+    grid-auto-flow: dense;
+  }
+
+  &__item {
+    border-radius: 40px;
+    height: 100%;
+
+    &:nth-child(1) {
+      grid-column: span 4;
+      grid-row: span 4;
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      grid-column: span 8;
+      grid-row: span 4;
+      order: 2;
+      background-color: $light-blue;
+    }
+
+    &:nth-child(3) {
+      grid-column: span 8;
+      grid-row: span 4;
+      order: 3;
+      background-color: $light-blue;
+    }
+
+    &:nth-child(4) {
+      grid-column: span 4;
+      grid-row: span 4;
+      order: 4;
+    }
+
+    &:nth-child(5) {
+      grid-column: span 6;
+      grid-row: span 4;
+      order: 5;
+    }
+
+    &:nth-child(6) {
+      grid-column: span 3;
+      grid-row: span 2;
+      order: 6;
+    }
+
+    &:nth-child(7) {
+      grid-column: span 3;
+      grid-row: span 2;
+      order: 7;
+    }
+
+    &:nth-child(8) {
+      grid-column: span 3;
+      grid-row: span 2;
+      order: 8;
+    }
+
+    &:nth-child(9) {
+      grid-column: span 3;
+      grid-row: span 2;
+      order: 9;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    border-radius: 40px;
+  }
+
+  &__content {
+    padding: 55px 80px;
+  }
+
+  &__title {
+    margin: 0 0 18px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 0.93em;
+  }
+
+  &__desc {
+    margin: 0;
+    line-height: 1.56em;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.fancybox-image {
+  border-radius: 40px;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    &__content {
+      padding: 30px 40px;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    padding-bottom: 24px;
+
+    &__list {
+      gap: 12px;
+    }
+
+    &__item {
+      border-radius: 30px;
+
+      &:nth-child(1) {
+        grid-column: span 6;
+      }
+
+      &:nth-child(2) {
+        grid-column: span 12;
+        order: 4;
+      }
+
+      &:nth-child(3) {
+        grid-column: span 12;
+      }
+
+      &:nth-child(4) {
+        grid-column: span 6;
+        order: 2;
+      }
+    }
+
+    &__image {
+      border-radius: 30px;
+    }
+  }
+}
+

@@ -1,0 +1,108 @@
+.header {
+  padding: 23px 0;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    padding: 11px 34px 15px;
+    background: $white;
+    border-radius: 75px;
+  }
+
+  &__logo {
+    &-link {
+      margin-right: auto;
+      width: 64px;
+      height: 25px;
+    }
+
+    &-icon {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__nav {
+    margin-right: 352px;
+    &-list {
+      @include list-reset;
+      display: flex;
+      gap: 41px;
+    }
+
+    &-link {
+      font-size: 13px;
+      line-height: 1.04px;
+      color: $main-font-color;
+      outline: none;
+      transition: color .2s ease-in-out;
+
+      &:focus-visible {
+        color: $orange;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:active {
+        color: $dark-orange;
+      }
+    }
+  }
+
+  &__telephone {
+    &-link {
+      outline: none;
+
+      &:focus-visible .header__telephone-number {
+        color: $orange;
+      }
+    }
+
+    &-number {
+      color: $aqua;
+      line-height: 1.437em;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:active {
+        color: $dark-orange;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    &__wrapper {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__logo-link {
+      margin-right: initial;
+    }
+
+    &__nav {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 886px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 0 13px;
+  }
+}

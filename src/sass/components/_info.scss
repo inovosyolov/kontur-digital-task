@@ -1,0 +1,111 @@
+.info {
+  padding-bottom: 60px;
+  color: $main-font-color;
+
+  &__title {
+    margin: 0 auto 34px;
+    max-width: 598px;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 1em;
+    text-align: center;
+  }
+
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 26px;
+    transform: translateX(-24px);
+  }
+
+  &__item {
+    max-width: calc(100% / 4 - 20px);
+    width: 100%;
+    border-radius: 30px;
+
+    &:nth-child(1) {
+      background: $light-blue url(../img/sprite.svg#info-icon-1) no-repeat center top 50px / 59px 59px;
+    }
+
+    &:nth-child(2) {
+      background: $light-blue url(../img/sprite.svg#info-icon-2) no-repeat center top 50px / 59px 59px;
+    }
+
+    &:nth-child(3) {
+      background: $light-blue url(../img/sprite.svg#info-icon-3) no-repeat center top 48px / 69px 60px;
+    }
+
+    &:nth-child(4) {
+      background: $light-blue url(../img/sprite.svg#info-icon-4) no-repeat center top 40px / 71px 71px;
+    }
+
+    &:nth-child(5) {
+      background: $light-blue url(../img/sprite.svg#info-icon-5) no-repeat center top 51px / 62px 57px;
+    }
+
+    &:nth-child(6) {
+      background: $light-blue url(../img/sprite.svg#info-icon-6) no-repeat center top 49px / 59px 59px;
+    }
+
+    &:nth-child(7) {
+      background: $light-blue url(../img/sprite.svg#info-icon-7) no-repeat center top 48px / 60px 60px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 127px 35px 31px;
+  }
+
+  &__subtitle {
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.15em;
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.15em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .info {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__list {
+      transform: translateX(0);
+    }
+
+    &__item {
+      max-width: calc(100% / 3 - 20px);
+
+      &:last-child {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    padding-bottom: 30px;
+
+    &__list {
+      gap: 10px;
+    }
+
+    &__item {
+      max-width: calc(100% / 2 - 5px);
+    }
+  }
+}
