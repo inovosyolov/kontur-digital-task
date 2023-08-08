@@ -1,0 +1,65 @@
+.modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, .3);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 54px;
+    max-width: 635px;
+    width: 100%;
+    background: $white;
+    box-shadow: 0px 0px 18px -4px rgba(34, 60, 80, 0.2);
+    transform: scale(0);
+    transition: transform .2s ease-in-out;
+    overflow-y: auto;
+  }
+
+  &__close-btn {
+    @include btn-reset;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 15px;
+    height: 15px;
+
+    &-icon {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__title {
+    margin: 0 auto 46px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1em;
+    color: $main-font-color;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_active {
+    visibility: visible;
+    opacity: 1;
+
+    & .modal__box {
+      transform: scale(1);
+    }
+  }
+}

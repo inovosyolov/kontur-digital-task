@@ -135,6 +135,50 @@
             </div>
           </div>
         </div>
+        <div class="modal">
+          <div class="modal__box">
+            <div class="modal__content">
+            <button class="modal__close-btn">
+              <svg class="modal__close-btn-icon" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#close-btn-icon"></use>
+              </svg>
+            </button>
+            <h2 class="modal__title">Заказать звонок</h2>
+            <!-- <form action="https://jsonplaceholder.typicode.com/posts" class="modal__form form" method="POST"> -->
+            <form class="modal__form form">
+              <label for="name" class="form__label">
+                <span class="form__text">Имя</span>
+                <input name="name" type="text" placeholder="ваше имя" data-validate-field="name"
+                  class="form__input form__input_name">
+              </label>
+              <label for="tel" class="form__label">
+                <span class="form__text">Телефон</span>
+                <input name="tel" type="tel" placeholder="+7 ХХХ - ХХХ - ХХ -ХХ" data-validate-field="tel"
+                  data-validate-rules="phone" class="form__input form__input_tel">
+              </label>
+              <label for="email" class="form__label">
+                <span class="form__text">Email</span>
+                <input name="email" type="email" placeholder="mail@site.com" data-validate-field="mail"
+                  class="form__input form__input_mail">
+              </label>
+              <label for="msg" class="form__label">
+                <span class="form__text">Сообщение</span>
+                <textarea class="form__input form__input_msg" placeholder="Ваше сообщение ..." name="msg"></textarea>
+              </label>
+              <span class="form__privacy">Нажимая кнопку &laquo;Отправить&raquo;, соглашаюсь с
+                <a href="#" class="form__privacy form__privacy_link">политикой конфидениальности</a>
+              </span>
+              <button class="form__btn btn">
+                <span class="form__btn-text btn__text">Отправить</span>
+                <svg class="form__btn-icon btn__icon" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#btn-icon"></use>
+                </svg>
+              </button>
+            </form>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 

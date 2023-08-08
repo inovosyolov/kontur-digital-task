@@ -1,0 +1,55 @@
+.form {
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 1.17em;
+    color: #000;
+  }
+
+  &__input {
+    padding: 28px 30px;
+    margin-bottom: 24px;
+    line-height: 1.16;
+    color: $main-font-color;
+    border: 1px solid $dark-grey;
+    border-radius: 10px;
+
+    &_msg {
+      margin-bottom: 12px;
+      min-height: 120px;
+      resize: none;
+    }
+
+    &::placeholder {
+      color: $dark-grey;
+    }
+  }
+
+  &__privacy {
+    margin-bottom: 25px;
+    max-width: 345px;
+    line-height: 1.16em;
+    color: $dark-grey;
+
+    &_link {
+      color: $orange;
+    }
+  }
+
+  &__btn {
+    max-width: 265px;
+  }
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  font-size: 12px;
+}
