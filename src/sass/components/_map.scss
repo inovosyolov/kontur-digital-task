@@ -34,3 +34,9 @@
     padding-bottom: 39px;
   }
 }
+
+@media (max-width: 500px) {
+  .map {
+    height: 415px;
+  }
+}

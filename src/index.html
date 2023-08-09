@@ -46,7 +46,7 @@
             </li>
           </ul>
         </nav>
-        <a href="tel:+74993489396" class="header__telephone-link" aria-label="Ссылка на номер телефона школы">
+        <a href="tel:+74993489396" class="header__telephone-link" aria-label="Ссылка на номер телефона школы Code">
           <span class="header__telephone-number">
             +7 (499) 348 93&nbsp;96
           </span>
@@ -70,7 +70,7 @@
               <div class="banner__wrapper">
                 <div class="banner__content">
                   <h2 class="banner__title">
-                    Школа&nbsp;<span class="banner__title banner__title_orange">{</span><span
+                    Школа <span class="banner__title banner__title_orange">{</span><span
                       class="banner__title banner__title_bold">программирования</span><span
                       class="banner__title banner__title_orange">}</span> для тех, кому нужны реальные навыки,
                     а&nbsp;не&nbsp;просто&nbsp;сертификат
@@ -79,7 +79,7 @@
                   <p class="banner__desc">Закажите звонок, и&nbsp;наш специалист свяжется с&nbsp;вами в&nbsp;ближайшее
                     время
                   </p>
-                  <button class="banner__btn btn">
+                  <button class="banner__btn btn" aria-label="Кнопка для заказа звонка">
                     <span class="banner__btn-text btn__text">Заказать звонок</span>
                     <svg class="banner__btn-icon btn__icon" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/sprite.svg#btn-icon"></use>
@@ -87,8 +87,8 @@
                   </button>
                 </div>
                 <picture class="banner__picture">
-                  <source srcset="img/banner/banner-img-1-320.png" media="(max-width: 400px)" class="banner__image">
-                  <img src="img/banner/banner-img-1.png" alt="" class="banner__image">
+                  <source srcset="img/banner/banner-img-1-mobile.png" media="(max-width: 400px)" class="banner__image">
+                  <img src="img/banner/banner-img-1.png" alt="Картинка баннера" class="banner__image">
                 </picture>
               </div>
             </div>
@@ -102,7 +102,7 @@
                   <p class="banner__desc">Всё, что вы&nbsp;узнали, вы&nbsp;тут&nbsp;же начинаете применять
                     на&nbsp;практике. Вы&nbsp;сразу видите результаты своего труда.
                   </p>
-                  <button class="banner__btn btn">
+                  <button class="banner__btn btn" aria-label="Кнопка для заказа звонка">
                     <span class="banner__btn-text btn__text">Заказать звонок</span>
                     <svg class="banner__btn-icon btn__icon" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/sprite.svg#btn-icon"></use>
@@ -110,8 +110,8 @@
                   </button>
                 </div>
                 <picture class="banner__picture">
-                  <source srcset="img/banner/banner-img-2-320.png" media="(max-width: 400px)" class="banner__image">
-                  <img src="img/banner/banner-img-2.png" alt="" class="banner__image">
+                  <!-- <source srcset="img/banner/banner-img-2-mobile.png" media="(max-width: 400px)" class="banner__image"> -->
+                  <img src="img/banner/banner-img-2.png" alt="Картинка баннера" class="banner__image">
                 </picture>
               </div>
             </div>
@@ -125,7 +125,7 @@
                   <p class="banner__desc">Теория и&nbsp;практика подаются маленькими порциями. Так вам будет легче
                     усваивать новые знания.
                   </p>
-                  <button class="banner__btn btn">
+                  <button class="banner__btn btn" aria-label="Кнопка для заказа звонка">
                     <span class="banner__btn-text btn__text">Заказать звонок</span>
                     <svg class="banner__btn-icon btn__icon" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/sprite.svg#btn-icon"></use>
@@ -133,17 +133,21 @@
                   </button>
                 </div>
                 <picture class="banner__picture">
-                  <source srcset="img/banner/banner-img-3-320.png" media="(max-width: 400px)" class="banner__image">
-                  <img src="img/banner/banner-img-3.png" alt="" class="banner__image">
+                  <!-- <source srcset="img/banner/banner-img-3-mobile.png" media="(max-width: 400px)" class="banner__image"> -->
+                  <img src="img/banner/banner-img-3.png" alt="Картинка баннера" class="banner__image">
                 </picture>
               </div>
             </div>
           </div>
+          <div class="banner__nav-btn-wrap">
+            <button class="banner__nav-btn-prev banner__nav-btn_orange btn-arrow"></button>
+            <button class="banner__nav-btn btn-arrow"></button>
+          </div>
         </div>
         <div class="modal">
           <div class="modal__box">
-            <button class="modal__close-btn">
-              <svg class="modal__close-btn-icon" xmlns="http://www.w3.org/2000/svg">
+            <button class="modal__close-btn" aria-label="Кнопка для закрытия окна с формой">
+              <svg class="modal__close-btn-icon" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка закрытия кнопки">
                 <use xlink:href="img/sprite.svg#close-btn-icon"></use>
               </svg>
             </button>
@@ -153,26 +157,28 @@
               <label for="name" class="form__label">
                 <span class="form__text">Имя</span>
                 <input name="name" type="text" placeholder="ваше имя" data-validate-field="name"
-                  class="form__input form__input_name">
+                  class="form__input form__input_name" aria-label="Поле ввода имени">
               </label>
               <label for="tel" class="form__label">
                 <span class="form__text">Телефон</span>
                 <input name="tel" type="tel" placeholder="+7 ХХХ - ХХХ - ХХ -ХХ" data-validate-field="tel"
-                  data-validate-rules="phone" class="form__input form__input_tel">
+                  data-validate-rules="phone" class="form__input form__input_tel"
+                  aria-label="Поле ввода номера телефона">
               </label>
               <label for="email" class="form__label">
                 <span class="form__text">Email</span>
                 <input name="email" type="email" placeholder="mail@site.com" data-validate-field="mail"
-                  class="form__input form__input_mail">
+                  class="form__input form__input_mail" aria-label="Поле ввода почтового адреса">
               </label>
               <label for="msg" class="form__label">
                 <span class="form__text">Сообщение</span>
-                <textarea class="form__input form__input_msg" placeholder="Ваше сообщение ..." name="msg"></textarea>
+                <textarea class="form__input form__input_msg" placeholder="Ваше сообщение ..." name="msg"
+                  aria-label="Поле ввода сообщения"></textarea>
               </label>
               <span class="form__privacy">Нажимая кнопку &laquo;Отправить&raquo;, соглашаюсь с
                 <a href="#" class="form__privacy form__privacy_link">политикой конфидениальности</a>
               </span>
-              <button class="form__btn btn">
+              <button class="form__btn btn" aria-label="Кнопка для отправки данных формы">
                 <span class="form__btn-text btn__text">Отправить</span>
                 <svg class="form__btn-icon btn__icon" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite.svg#btn-icon"></use>
@@ -230,7 +236,7 @@
           <li class="info__item">
             <div class="info__content">
               <h3 class="info__subtitle">Быстрый и&nbsp;легкий возврат</h3>
-              <p class="info__desc">Если передумаете учиться&nbsp;&mdash; вернем деньги за&nbsp;3 <br>рабочих дня</p>
+              <p class="info__desc">Если передумаете учиться&nbsp;&mdash; вернем деньги за&nbsp;3 рабочих дня</p>
             </div>
           </li>
         </ul>
@@ -241,8 +247,9 @@
       <div class="cards__container container">
         <ul class="cards__list">
           <li class="cards__item">
-            <a href="img/cards/card-img-1.jpg" data-fancybox="gallery" class="cards__link">
-              <img src="img/cards/card-img-1.jpg" class="cards__image" />
+            <a href="img/cards/card-img-1.jpg" data-fancybox="gallery" class="cards__link"
+              aria-label="Нажмите чтобы открыть фотографию в полноэкранном режиме">
+              <img src="img/cards/card-img-1.jpg" alt="Фотография работы школы Code" class="cards__image" />
             </a>
           </li>
           <li class="cards__item">
@@ -268,33 +275,39 @@
             </div>
           </li>
           <li class="cards__item">
-            <a href="img/cards/card-img-2.jpg" data-fancybox="gallery" class="cards__link">
-              <img src="img/cards/card-img-2.jpg" class="cards__image" />
+            <a href="img/cards/card-img-2.jpg" data-fancybox="gallery" class="cards__link"
+              aria-label="Нажмите чтобы открыть фотографию в полноэкранном режиме">
+              <img src="img/cards/card-img-2.jpg" alt="Фотография работы школы Code" class="cards__image" />
             </a>
           </li>
           <li class="cards__item">
-            <a href="img/cards/card-img-3.jpg" data-fancybox="gallery" class="cards__link">
-              <img src="img/cards/card-img-3.jpg" class="cards__image" />
+            <a href="img/cards/card-img-3.jpg" data-fancybox="gallery" class="cards__link"
+              aria-label="Нажмите чтобы открыть фотографию в полноэкранном режиме">
+              <img src="img/cards/card-img-3.jpg" alt="Фотография работы школы Code" class="cards__image" />
             </a>
           </li>
           <li class="cards__item">
-            <a href="img/cards/card-img-4.jpg" data-fancybox="gallery" class="cards__link">
-              <img src="img/cards/card-img-4.jpg" class="cards__image" />
+            <a href="img/cards/card-img-4.jpg" data-fancybox="gallery" class="cards__link"
+              aria-label="Нажмите чтобы открыть фотографию в полноэкранном режиме">
+              <img src="img/cards/card-img-4.jpg" alt="Фотография работы школы Code" class="cards__image" />
             </a>
           </li>
           <li class="cards__item">
-            <a href="img/cards/card-img-5.jpg" data-fancybox="gallery" class="cards__link">
-              <img src="img/cards/card-img-5.jpg" class="cards__image" />
+            <a href="img/cards/card-img-5.jpg" data-fancybox="gallery" class="cards__link"
+              aria-label="Нажмите чтобы открыть фотографию в полноэкранном режиме">
+              <img src="img/cards/card-img-5.jpg" alt="Фотография работы школы Code" class="cards__image" />
             </a>
           </li>
           <li class="cards__item">
-            <a href="img/cards/card-img-6.jpg" data-fancybox="gallery" class="cards__link">
-              <img src="img/cards/card-img-6.jpg" class="cards__image" />
+            <a href="img/cards/card-img-6.jpg" data-fancybox="gallery" class="cards__link"
+              aria-label="Нажмите чтобы открыть фотографию в полноэкранном режиме">
+              <img src="img/cards/card-img-6.jpg" alt="Фотография работы школы Code" class="cards__image" />
             </a>
           </li>
           <li class="cards__item">
-            <a href="img/cards/card-img-7.jpg" data-fancybox="gallery" class="cards__link">
-              <img src="img/cards/card-img-7.jpg" class="cards__image" />
+            <a href="img/cards/card-img-7.jpg" data-fancybox="gallery" class="cards__link"
+              aria-label="Нажмите чтобы открыть фотографию в полноэкранном режиме">
+              <img src="img/cards/card-img-7.jpg" alt="Фотография работы школы Code" class="cards__image" />
             </a>
           </li>
         </ul>
@@ -324,33 +337,33 @@
           </div>
           <ul class="footer-top-left__social-list">
             <li class="footer-top-left__social-item">
-              <a href="#" class="footer-top-left__social-link">
-                <svg class="footer-top-left__logo-icon" xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Логотип школы Code">
+              <a href="https://instagram.com/" target="_blank" class="footer-top-left__social-link" aria-label="Ссылка на социальную сеть Instagram">
+                <svg class="footer-top-left__social-icon" xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Логотип социальной сети Instagram">
                   <use xlink:href="img/sprite.svg#insta"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-top-left__social-item">
-              <a href="#" class="footer-top-left__social-link">
-                <svg class="footer-top-left__logo-icon" xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Логотип школы Code">
+              <a href="https://vk.com/" target="_blank" class="footer-top-left__social-link" aria-label="Ссылка на социальную сеть Vkontakte">
+                <svg class="footer-top-left__social-icon" xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Логотип социальной сети Vkontakte">
                   <use xlink:href="img/sprite.svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-top-left__social-item">
-              <a href="#" class="footer-top-left__social-link">
-                <svg class="footer-top-left__logo-icon" xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Логотип школы Code">
+              <a href="https://facebook.com/" target="_blank" class="footer-top-left__social-link" aria-label="Ссылка на социальную сеть Facebook">
+                <svg class="footer-top-left__social-icon" xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Логотип социальной сети Facebook">
                   <use xlink:href="img/sprite.svg#fb"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-top-left__social-item">
-              <a href="#" class="footer-top-left__social-link">
-                <svg class="footer-top-left__logo-icon" xmlns="http://www.w3.org/2000/svg"
-                  aria-label="Логотип школы Code">
+              <a href="https://youtube.com/" target="_blank" class="footer-top-left__social-link" aria-label="Ссылка на социальную сеть Youtube">
+                <svg class="footer-top-left__social-icon" xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Логотип социальной сети YouTube">
                   <use xlink:href="img/sprite.svg#yt"></use>
                 </svg>
               </a>
@@ -389,21 +402,26 @@
           </nav>
         </div>
         <div class="footer-top-right">
-          <a href="tel:+79999999999" class="footer-top-right__link footer-top-right__link_phone">+7 (999) 999 99 99</a>
-          <a href="mailto:info@code.ru" class="footer-top-right__link footer-top-right__link_mail">info@code.ru</a>
+          <a href="tel:+79999999999" class="footer-top-right__link footer-top-right__link_phone"
+            aria-label="Ссылка на номер телефона школы Code">+7 (999) 999 99 99</a>
+          <a href="mailto:info@code.ru" class="footer-top-right__link footer-top-right__link_mail"
+            aria-label="Ссылка на почтовый адрес школы Code">info@code.ru</a>
         </div>
       </div>
       <div class="footer-bottom">
         <span class="footer-bottom__copyright">&copy;&nbsp;2023&nbsp;&mdash; Все права защищены</span>
-        <a href="#" class="footer-bottom__link">Пользовательское соглашение</a>
-        <a href="#" class="footer-bottom__link">Политика конфиденциальности</a>
+        <a href="#" class="footer-bottom__link"
+          aria-label="Ссылка для открытия пользовательского соглашения">Пользовательское соглашение</a>
+        <a href="#" class="footer-bottom__link" aria-label="Ссылка для открытия политики конфиденциальности">Политика
+          конфиденциальности</a>
       </div>
     </div>
   </footer>
 
   <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
   </script>
-  <script defer src="app.js"></script>
+  <script defer src="js/fancybox.umd.js"></script>
+  <script defer type="module" src="js/main.js"></script>
 
 </body>
 

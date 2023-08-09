@@ -71,11 +71,12 @@ const fonts = () => {
 const scripts = () => {
   return src([
     './src/js/components/**/*.js',
+    './src/js/utils/**/*.js',
     './src/js/main.js'
   ])
-  .pipe(concat('app.js'))
+  // .pipe(concat('app.js'))
   .pipe(sourcemaps.write())
-  .pipe(dest('dist'))
+  .pipe(dest('./dist/js'))
   .pipe(browserSync.stream())
 }
 

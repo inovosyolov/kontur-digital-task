@@ -149,3 +149,15 @@
     padding: 16px 0 13px;
   }
 }
+
+@media (max-width: 500px) {
+  .header {
+    &__wrapper {
+      padding: 8px 22px 8px 17px;
+    }
+
+    &__telephone-number {
+      font-size: 14px;
+    }
+  }
+}

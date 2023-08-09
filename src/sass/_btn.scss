@@ -5,7 +5,7 @@
   justify-content: center;
   gap: 12px;
   padding: 27px 45px;
-  font-family: $main-font;
+  font-family: $main-font-family;
   color: $white;
   background: $orange;
   border-radius: 82px;
@@ -27,5 +27,37 @@
 
   &:active {
     background: $dark-aqua;
+  }
+}
+
+.btn-arrow {
+  position: relative;
+  @include btn-reset;
+  width: 37px;
+  height: 37px;
+  background: $white;
+  border-radius: 50%;
+  z-index: 100;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid $main-font-color;
+    border-right: 2px solid $main-font-color;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    width: 10px;
+    height: 2px;
+    border-top: 2px solid $main-font-color;
   }
 }
